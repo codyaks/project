@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="p1"></p>
+        <h1 id="h1"></h1>
+        <script>
+            function displayer(value){
+                document.getElementById("p1").innerHTML=value;
+            }
+            function calculate(num1,num2,mycallback){
+                value=num1+num2;
+                mycallback(value);
+            }
+            calculate(24,10,displayer);
+        </script>
+    </body>
+</html>

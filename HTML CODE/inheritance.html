@@ -1,0 +1,31 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="p1"></p>
+        <h5 id="h51"></h5>
+        <h4 id="h41"></h4>
+        <script>
+            class car {
+                constructor(brand){
+                    this.brandname=brand;
+                }
+                present(){
+                return this.brandname;
+                }
+            }
+            class model extends car{
+                constructor(brand,mod){
+                    super(brand);
+                    this.model=mod;
+                }
+                show(){
+                    return this.present()+" it is a "+this.model
+                }
+            }
+            let mycar=new model("ford","mustang");
+            document.getElementById("h51").innerHTML=mycar.show()
+        </script>
+    </body>
+</html>

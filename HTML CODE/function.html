@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="p1"></p>
+        <h5 id="h51"></h5>
+        <h4 id="h41"></h4>
+        <button onclick="myfunction()">multiply</button>
+        <button onclick="myfunction1(10,20)">multiply1</button>
+        <script>
+            var a=3;
+            function myfunction(){
+                var b=10;
+                var c=a*b;
+                document.getElementById("h51").innerHTML="multiplication="+c
+            }
+            document.getElementById("p1").innerHTML=a;
+            document.getElementById("h41").innerHTML=b;
+            function myfunction1(x,y){
+                document.getElementById("h51").innerHTML="multiplication="+(x*y);
+            }
+            var result=function(a,b){return a*b};
+            document.write(result(20,3));
+        </script>
+    </body>
+</html>

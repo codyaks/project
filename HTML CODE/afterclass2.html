@@ -1,0 +1,46 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="p1"></p>
+        <h5 id="h51"></h5>
+        <h4 id="h41"></h4>
+        <p style="color: red;" id="pr"></p>
+        <h3 id="h31"></h3>
+        <button onclick="functionadd()">add</button><br><br>
+        <button onclick="functiondiv()">divide</button><br><br>
+        <button onclick="functionmul(12,33)">multiply</button><br><br>
+        <button onclick="functionsub()">subtract</button><br><br>
+        <button onclick="functionrem(457,5)">remainder</button>
+        <script>
+            function functionadd(){
+                var a=3;
+                var b=10;
+                var c=a+b;
+                document.getElementById("p1").innerHTML="a+b="+c;
+            }
+            function functiondiv(){
+             var e=72;
+             var f=2;
+             var g=e/f;
+             
+             document.getElementById("h51").innerHTML="72/2="+g;
+            }
+            function functionmul(x,y){
+                var z=x*y
+                document.getElementById("h41").innerHTML="x*y="+z
+            }
+            function functionsub(){
+             var h=486;
+             var i=265;
+             var j=h-i;
+             document.getElementById("h31").innerHTML="486-265="+j
+            }
+            function functionrem(r,s){
+                var q=r%s
+                document.getElementById("pr").innerHTML="remainder of 457/5="+q
+            }
+        </script>
+    </body>
+</html>

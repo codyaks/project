@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <center>
+          <h1>Adarsh Bal Niketan</h1>  
+        </center>
+    </head>
+    <body>
+       <center><br><img src="https://iitr.ac.in/abn/assets/images/schoolpic-980x424.png" height="200"></ing><br></center>
+      <main><p><h3><mark>About us-</mark></h3><mark>Adarsh Bal Niketan provides all round education to develop a sound mind, a robust physique and strong moral values. As an educational institution located within the campus of The Indian Institute of Technology (formerly, University of Roorkee), it strives for excellence while upholding the highest secular values enshrined in our Constitution. Over the last sixty-four years, ABN has striven to produce citizens who will serve the best interests of the Nation in various walks of life and society.</mark></p></mark></main>
+       <h2>School timings--</h2>
+        <ul><table border="4">
+          <tr>
+            <th bgcolor="yellow">Winter timing</th>
+            <th bgcolor="yellow">Summer timing</th>
+          </tr>
+          <tr>
+            <th bgcolor="red">8:00am-2:20pm</th>
+            <th bgcolor="red">7:30am-1:50pm</th>
+          </tr>
+         </ul><table></table><br>
+      <h2>Student details form</h2>
+      <form action="/action_page.php"
+           <oninput = "x.value=(parseInt(m1.value)+parseInt(m2.value)+parseInt(m3.value))/3">
+        <fieldset>
+            <legend>
+              <h3>Student Details</h3>
+            </legend>
+           <label>Name:</label><br><input type="text"><br>
+           <label>Age:</label><br><input type="number"><br>
+           <label>Email:</label><br><input type="Email"><br>
+           <label>Password:</label><br><input type="password"><br>
+           <label>Date of birth:</label><br><input type="date"><br>
+
+        </fieldset>
+        <fieldset>
+            <select name="subject" id="subject">
+              <option value="math">maths</option>  
+              <option value="english">english</option>
+              <option value="hindi">hindi</option>
+              <option value="sanskrit">sanskrit</option>
+            </select>
+            <input type="number" id="m1" name="m1"><br>
+            <select name="subject1" id="subject1">
+                <option value="math">maths</option>  
+                <option value="english">english</option>
+                <option value="hindi">hindi</option>
+                <option value="sanskrit">sanskrit</option>
+              </select>
+              <input type="number" id="m2" name="m2"><br>
+              <select name="subject2" id="subject2">
+                <option value="math">maths</option>  
+                <option value="english">english</option>
+                <option value="hindi">hindi</option>
+                <option value="sanskrit">sanskrit</option>
+              </select>
+              <input type="number" id="m3" name="m3"><br>
+              average:<output name="x" for="m1 m2 m3"></output> 
+        
+            </fieldset>
+            <input type="radio" name="gender" id="gender" value="male">male<br>
+            <input type="radio" name="gender" id="gender" value="female">female<br>
+            <input type="checkbox" name="roorkee" id="city" value="roorkee">roorkee<br>
+            <input type="checkbox" name="delhi" id="city" value="delhi">delhi<br>
+        </form>
+    </body>
+</html>

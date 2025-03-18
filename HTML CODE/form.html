@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="container">
+        <form id="form" onsubmit="validate(event)">
+            <Fieldset style="text-align: center;">
+                <label>Email Id </label><input id="email" type="text"><br>
+                <label>password </label><input id="pass" minlength="8" type="password"><br>
+                <label>age</label><input id="age" min="18" max="45" type="number"><br>
+                <button type="submit">login</button>
+            </Fieldset>
+        </form>
+        </div> 
+        <div id="message"></div>
+        <script src="formvalid.js"></script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="p1"></p>
+        <h1 id="h1"></h1>
+        <script>
+            function display(sum){
+             document.getElementById("h1").innerHTML=sum;
+            }
+            function sum(num1,num2){
+                value=num1+num2;
+                display(value);
+            } 
+            let mypromise=new Promise(function(myresolve,myreject){
+                let x=0;
+                if (x==0){
+                  myresolve("ok");
+                }
+                else{
+                    myreject("error")
+                }
+            });
+            mypromise.then(
+                function(value){sum(5,5);},
+                function(error){sum(error);}
+            );
+        </script>
+    </body>
+</html>

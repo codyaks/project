@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h5 id="h51"></h5>
+        <h4 id="h41"></h4>
+        <p id="p1"></p>
+        <button onclick="ascend()">ascending</button>
+        <button onclick="descend()">descending</button>
+        <Script>
+            var num=[1,35,567,37,28,7]
+            function ascend(){
+             num.sort(function(a,b){return a-b});
+             document.getElementById("h51").innerHTML=num;
+            }
+            function descend(){
+             num.sort(function(a,b){return b-a});
+             document.getElementById("h41").innerHTML=num;
+            }
+            function mul(num){
+                return num*10;
+            }
+            var newarray=num.map(mul);
+            document.getElementById("p1").innerHTML=newarray
+        </Script>
+    </body>
+</html>
