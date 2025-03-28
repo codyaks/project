@@ -1,0 +1,28 @@
+<script>
+choice= prompt("welcome to area calculator, please enter your choice.\n1.area of rectange.\n2.area of circle\n3.parellelogram.\n4.area of triangle")
+if (choice==1){
+    var l=prompt("please enter the length")
+    var b=prompt("please enter the breath")
+    var result= Number(l)*Number(b)
+    alert("result-"+result)
+}  
+if (choice==2){
+    var r=prompt("Please enter the radius")
+    var pi= 3.14
+    var result2= Number(r)*Number(r)*Number(pi)
+    alert("result-"+result2)
+}
+if (choice==3){
+    var h=prompt("Please enter the height")
+    var base=prompt("please enter the base")
+    var result3=Number(h)*Number(base)
+    alert("result-"+result3)
+}
+if (choice==4){
+    var basetri=prompt("Please enter the base")
+    var height=prompt("please enter the height")
+    var half=2
+    var result4=Number(basetri)*Number(height)/half
+    alert("result-"+result4)
+}
+</script>

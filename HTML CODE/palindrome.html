@@ -1,0 +1,21 @@
+<html>
+    <head>
+<h1>palindrome app</h1>
+    </head>
+    <body>
+        <script>
+            function palindrome(value){
+                var string= value.replace(/[^A-Z0-9]/ig,"").toLowerCase();
+                var restring= string.split("").reverse().join("");
+                if (string==restring){
+                    document.write(string+" is a palindrome");
+                }
+                else{
+                    document.write(string+" is not a palindrome");
+                }
+            }
+            palindrome("maiM");
+
+        </script>
+    </body>
+</html>
