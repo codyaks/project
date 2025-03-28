@@ -1,0 +1,22 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="h3" onload="showtime()"></div>
+        <script>
+            function showtime(){
+            var date= new Date();
+            var m= date.getMonth();
+            var d= date.getDate();
+            var y= date.getFullYear()
+            var final=m+1+"/"+d+"/"+y
+            document.getElementById("h3").innerHTML=final;
+            if (d==26& m==2){
+            document.write("happy bithday")
+        }
+        }
+        showtime()
+        </script>
+    </body>
+</html>
