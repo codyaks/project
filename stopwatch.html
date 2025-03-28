@@ -1,0 +1,58 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+            <p><span id="seconds">00</span>:<span id="millisec">00</span></p>
+            <button id="start" onclick="start()">start</button>
+            <button id="stop" onclick="stop()">stop</button>
+            <button id="reset" onclick="reset()">reset</button>
+        </div>
+        <script>
+            window.onload=function (){
+            var sec=0;
+            var milliseconds=0;
+            var displaysec=document.getElementById("seconds");
+            var displaymillisec=document.getElementById("millisec")
+            var bstart=document.getElementById("start");
+            var bstop=document.getElementById("stop");
+            var breset=document.getElementById("reset");
+            var interval;
+            
+            function start(){
+                clearInterval(interval);
+                interval=setInterval(starttimer(),10);
+            }
+            function stop(){
+                clearInterval(interval);
+            }
+            function reset(){
+                clearInterval(interval);
+                displaymillisec.innerHTML=milliseconds;
+                displaysec.innerHTML=sec;
+                milliseconds="00";
+                sec="00";
+              }
+              function starttimer(){
+                milliseconds++
+                if (milliseconds>=9){
+                    milliseconds="0"+milliseconds;
+                }
+                if (milliseconds>9){
+                    milliseconds=milliseconds;
+                }
+                if(milliseconds>99){
+                    sec++;
+                    displaysec.innerHTML="0"+sec;
+                    displaymillisec.innerHTML="0"+0;
+                }
+                if (sec>9){
+                    displaysec.innerHTML=sec;
+                }
+              }
+            }
+
+        </script>
+    </body>
+</html>
