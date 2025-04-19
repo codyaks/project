@@ -1,0 +1,32 @@
+<html>
+    <head>
+       
+    </head>
+    <body>
+        <div id="numdis" onclick="stopstart()"></div>
+        <script>
+            var num1;
+            var num= [1,2,3,4,5,6];
+            var stop=true;
+            var t;
+            function change(){
+                var random=Math.floor(Math.random()*6);
+                numdis.innerHTML=num[random]
+            }
+            function stopstart(){
+                if (stop){
+                    stop=false;
+                    t=setInterval(change,1000);
+                }
+                else{
+                    clearInterval(t);
+                    stop=true;
+                }
+            }
+            window.onload=function(){
+                num1=document.getElementById("numdis");
+                stopstart();
+            }
+        </script>
+    </body>
+</html>
