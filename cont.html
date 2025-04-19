@@ -1,0 +1,24 @@
+<head>
+
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <button id="buttonin" onclick="increase()">increase</button>
+    <button id="buttonde" onclick="decrease()">decrease</button>
+    <button id="buttonre" onclick="reset()">reset</button>
+    <script>
+        var num=1
+        function increase(){
+          var display=num++
+          document.getElementById("h1").innerHTML=display
+        }
+        function decrease(){
+          var display=num--
+          document.getElementById("h1").innerHTML=display
+        }
+        function reset(){
+          var display=0
+          document.getElementById("h1").innerHTML=display
+        }
+    </script>
+</body>
