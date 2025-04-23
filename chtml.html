@@ -1,0 +1,64 @@
+<html>
+<head>
+   <style>
+    body{
+      background-color: fuchsia;
+    }
+    .topnav{
+      overflow: hidden;
+      background-color: chartreuse;
+    }
+    .topnav a{
+        text-align: center;
+        float: left;
+        padding: 14px 16px;
+      text-decoration:none ;
+      font-size: 20px;
+    }
+    .topnav a:hover{
+        background-color: crimson;
+        color: white;
+    }
+    .topnav a.active{
+        background-color: blue;
+        color: aliceblue;
+    }
+    .picture{
+      height: 200px;
+      width: 300px;
+      margin-left: 65px;
+      margin-top: 50;
+    }
+   </style> 
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#">Home</a>
+        <a href="#">Classes</a>
+        <a href="#">Contact- us</a>
+        <a href="#">Gallery</a>
+    </div>
+    <div class="picture">
+    <section>
+      <img class="pic" src="https://www.avanse.com/blogs/images/Planning-to-study-abroad.jpg" style="height: 200px;">
+      <img class="pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSdX2hi0MalyAspPq6R2A29aYoeU4b5B0eoQ&s" style="height: 200px;">
+      <img class="pic" src="https://www.euroschoolindia.com/blogs/wp-content/uploads/2023/08/study-rewards.jpg" style="height: 200px; width: 330px;">
+    </section>
+    </div>
+    <script>
+      var myindex=0
+      carousel();
+      function carousel(){
+        var i;
+        var x= document.getElementsByClassName("pic")
+        for(i=0;i<x.length;i++){
+          x[i].style.display="none"
+        }
+        myindex++
+        if(myindex>x.length){myindex=1}
+        x[myindex-1].style.display="block";
+        setTimeout(carousel,2000)
+      }
+    </script>
+</body>
+</html>
