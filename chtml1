@@ -1,0 +1,45 @@
+<head>
+    <body>
+        <style>
+            .ptext{
+                font-size: 30px;
+                text-align: center;
+                letter-spacing: 8px;
+                text-transform: uppercase;
+                width: 100%;
+                position: absolute;
+                top: 45%;
+            }
+            .bimg{
+                position: relative;
+                opacity: 0.70;
+                background-repeat: no-repeat;
+                background-attachment:fixed ;
+                background-size: cover;
+                background-position: center;
+            }
+            .bimg{
+                background-image: url(backdrop.jpg);
+                min-width: 500px;
+                min-height: 400px;
+            }
+            .section-dark{
+                background-color: rgba(14, 5, 5, 0.833);
+                color: rgb(216, 221, 225);
+            }
+            .section-light{
+                background-color: beige;
+                color: rgb(50, 28, 28);
+            }
+        </style>
+        <section class="section section-dark">
+           <center><h1 style="color: #d80b0b;">welcome to the test paper library</h1></center>
+           <p>This page help students to practice for thier exams using last year question paper</p>
+        </section>
+        <div class="bimg">
+           <div class="ptext">
+            <span>section 2</span>
+           </div>
+        </div>
+    </body>
+</head>
