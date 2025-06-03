@@ -1,0 +1,8 @@
+name=input("hi my I am python what is  your name-")
+print("oh hello ",name,"how are you")
+print("I came to know that you got an award so congratulations")
+print("very happy for your achievements")
+cat=input("in which category you got this award?-")
+print("oo",cat,"is very interesting category")
+more=input("so now what else you are working on?-")
+print("all the best for",more,"and congratulations once again,bye bye!")
