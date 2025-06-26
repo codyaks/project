@@ -37,6 +37,12 @@ for i in range(1,hd+1):
     for j in range(1,space+1):
         print(end=" ")
     space=space-1
-    for j in range(2*i-1):
+    for j in range(1,2*i):
         print("*",end=" ")
     print()
+
+
+for j in range(1,6):
+    for i in range(1):
+        a=j
+        print(a,end="")
