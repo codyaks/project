@@ -14,3 +14,15 @@ obj=son("blue","true","6","tommy")
 print("name is ",obj.name,"and age is",obj.age)
 
 obj.print1()
+
+class vehicle:
+    def __init__(self,max_speed,milege,name):
+        self.max1=max_speed
+        self.name=name
+        self.milege=milege
+class bus(vehicle):
+    pass
+bus1=bus(80,"15km/L","volvo")
+print("milege is-",bus1.milege)
+print("max speed is-",bus1.max1)
+print("name is-",bus1.name)
