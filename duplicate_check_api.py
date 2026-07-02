@@ -1,0 +1,44 @@
+import requests, re, random
+
+from config import HF_API_KEY
+
+#change below model to this if required --> "sentence-transformers/all-mpnet-base-v2"
+
+MODEL="sentence-transformers/all-MiniLM-L6-v2"
+
+API=f"https://router.huggingface.co/hf-inference/models/{MODEL}"
+
+HEAD={"Authorization":f"Bearer {HF_API_KEY}"}
+
+TH=0.72
+
+DEMOS=[("how to delete my account","how do i remove my account"),
+
+("start the game","begin the game"),
+
+("nearest hospital to me","closest clinic near me"),
+
+("mobile games are getting bigger in size","game size on phones is increasing"),
+
+("is it going to rain today","today is rainy"),
+
+("reset my password","change my password")]
+
+tok= lambda s:"|".join(s.split())
+bar= lambda s:"█"*int(s*10)+"░"*(10-int(s*10))
+clean= lambda t:[w for w in (re.sub(r"[^a-z0-9]+", " ", x.lower()).strip() for x in t.split()) if w]
+nums = lambda t:set(re.findall(r"\d(?:\.\d+)?", t))
+has_any= lambda t,arr:any(a in set(clean(t)) for a in arr)
+
+def hf(q1,q2):
+    r=requests.post(API, headers=HEAD, json={"inputs":{"source_sentence":q1,"sentences":[q2]}},timeout=30)
+    if not r.ok: raise RuntimeError(r.text)
+    data=r.json()
+    if isinstance(data, dict): raise RuntimeError(data.get("error", str(data)))
+    return float(data[0])
+def smart_score(base,q1,q2,strong):
+    w1={w for w in clean(q1) if len(w)>=4}
+    w2={w for w in clean(q2) if len(w)>=4}
+    jac= len(w1&w2)/max(1,len(w1|w2))
+    boost = (0.04 if len(strong)>=2 else 0)+(0.03 if jac>=0.02 else 0)+(0.05 if jac>=0.35 else 0)
+    negA= 
